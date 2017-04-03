@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Pirata</title>
+  </head>
+  <body>
+      <div id="contadorClick" onclick="contadorClick"></div>
+      <h1>Twitter Pirata</h1>
+      <div>
+          <textarea rows="5" cols="50" id="textarea" oninput="contadorLetras()"></textarea>
+          <div id="contador"></div>
+          <p>De: <input type="text" id="autor"/></P>
+          <button type="submit" onclick="mostrarTweet()">Enviar</button>
+      </div>
+      <div id="nuevoTweet"></div>
+      <script src="js/main.js"></script>
+  </body>
+</html>
