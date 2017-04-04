@@ -2,18 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!--favicon de Twitter-->
+    <link type="image/x" rel="shortcut icon" href="favicon/favicon.ico">
     <title>Twitter Pirata</title>
   </head>
-  <body>
-      <div id="contadorClick" onclick="contadorClick"></div>
-      <h1>Twitter Pirata</h1>
+  <body bgcolor="#CEECF5">
+      <!-- span contador de clicks-->
+      <span> Número de Clicks: </span> 
+      <span id="contadorClicks"> 0 </span>
+      <!-- titulo en la pagina-->
+      <h1 align="center">Twitter Pirata</h1>
+      <!--div que contiene el area de texto y el input de autor-->
       <div>
-          <textarea rows="5" cols="50" id="textarea" oninput="contadorLetras()"></textarea>
+          <textarea rows="5" cols="50" id="textarea" oninput="contadorLetras()" placeholder="¿Qué está pasando?" maxlength="140"></textarea>
           <div id="contador"></div>
-          <p>De: <input type="text" id="autor"/></P>
-          <button type="submit" onclick="mostrarTweet()">Enviar</button>
+          <p>De: <input type="text" id="autor"/></p>
+          <button type="submit" onclick="mostrarTweet(); borrar()">Enviar</button>
       </div>
+      <!--div que contiene los nuevos tweets-->
       <div id="nuevoTweet"></div>
+      <!--scrip de javascript-->
       <script src="js/main.js"></script>
   </body>
 </html>
