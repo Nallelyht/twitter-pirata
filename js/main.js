@@ -4,11 +4,13 @@ var contador = 0;
 var tweet = document.getElementById("textarea");
 //variable para guardar el id de la entrada llamada autor
 var autor = document.getElementById("autor");
+var boton = document.getElementById("boton");
 
 //eventos para el contador de clicks, cuando se da click en la textarea o el input no cuenta el click
 document.addEventListener("click", contadorClick);
 tweet.addEventListener("click", sinClick);
 autor.addEventListener("click", sinClick);
+boton.addEventListener("click", sinClick);
 
 /*funcion para mostrar los tweets, se declara la variable ponerTweet para guardar el id donde se va a enviar los nuevos tweets, las variables nTweet, linea,salto crean nuevos elementos, div, hr y br respectivamente, en el div se guarda el valor de la text area y el autor, todo se agrega al nodo ponerTweet*/
 function mostrarTweet(){
@@ -45,7 +47,7 @@ function sinClick(){
 }
 /*funcion para limpiar la textarea y el input, tambien reinicia el contador de letras */
 function borrar(){
-    document.getElementById("textarea").value = "";
-    document.getElementById('autor').value="";
+   tweet.value = "";
+    autor.value= "";
     contadorLetras();
 }
